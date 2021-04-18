@@ -1,0 +1,122 @@
+[
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\AmbientLightSource.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\AmbientLightSource.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/AmbientLightSource.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Camera.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Camera.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Camera.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Colour.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Colour.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Colour.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Cube.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Cube.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Cube.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Cylinder.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Cylinder.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Cylinder.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Direction.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Direction.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Direction.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\DirectionalLightSource.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\DirectionalLightSource.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/DirectionalLightSource.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\ImageDisplay.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\ImageDisplay.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/ImageDisplay.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\LightSource.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\LightSource.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/LightSource.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Material.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Material.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Material.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Matrix.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Matrix.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Matrix.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Normal.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Normal.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Normal.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Object.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Object.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Object.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\PinholeCamera.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\PinholeCamera.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/PinholeCamera.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Plane.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Plane.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Plane.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Point.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Point.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Point.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\PointLightSource.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\PointLightSource.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/PointLightSource.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Scene.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Scene.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Scene.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\SceneReader.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\SceneReader.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/SceneReader.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Sphere.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Sphere.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Sphere.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Transform.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Transform.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Transform.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Tube.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Tube.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Tube.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\Vector.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\Vector.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/Vector.cpp"
+},
+{
+  "directory": "C:/Users/Jordan/Documents/GitHub/raytracer/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE   -g -std=c++17 -o CMakeFiles\\rayTracer.dir\\rayTracerMain.cpp.obj -c C:\\Users\\Jordan\\Documents\\GitHub\\raytracer\\rayTracerMain.cpp",
+  "file": "C:/Users/Jordan/Documents/GitHub/raytracer/rayTracerMain.cpp"
+}
+]

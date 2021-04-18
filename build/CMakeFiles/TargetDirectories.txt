@@ -1,0 +1,3 @@
+C:/Users/Jordan/Documents/GitHub/raytracer/build/CMakeFiles/rayTracer.dir
+C:/Users/Jordan/Documents/GitHub/raytracer/build/CMakeFiles/edit_cache.dir
+C:/Users/Jordan/Documents/GitHub/raytracer/build/CMakeFiles/rebuild_cache.dir
