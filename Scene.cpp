@@ -64,10 +64,20 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 			hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.ambientColour;
 		} else {
 			// Not an ambient light
-			
-			/**************************************************
-		    * Code for better lighting and shadows goes here. *
-	        **************************************************/
+			//Calculate Shadows.
+			Vector unit_l = -light->getLightDirection(hitPoint.point) / light->getLightDirection(hitPoint.point).norm();
+			Ray shadowRay;
+			shadowRay.point = hitPoint.point;
+			shadowRay.direction = unit_l;
+			RayIntersection shadowHitPoint = intersect(shadowRay);
+			//Calculate diffuse lighting
+			Vector unit_n = hitPoint.normal / hitPoint.normal.norm();
+			hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.diffuseColour;
+			//Id * kd(nhat . lhat)
+			// diffuse power of light source
+			// diffuse colour of the object
+			// normal to surface at p
+			// vector towards light at p
 		}
 	}
 
