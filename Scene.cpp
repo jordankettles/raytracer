@@ -71,13 +71,15 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 			shadowRay.direction = unit_l;
 			RayIntersection shadowHitPoint = intersect(shadowRay);
 			//Calculate diffuse lighting
-			Vector unit_n = hitPoint.normal / hitPoint.normal.norm();
-			hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.diffuseColour;
-			//Id * kd(nhat . lhat)
-			// diffuse power of light source
-			// diffuse colour of the object
-			// normal to surface at p
-			// vector towards light at p
+			if (shadowHitPoint.distance > light->getDistanceToLight(hitPoint.point) or shadowHitPoint.distance < 0) {
+				Vector unit_n = hitPoint.normal / hitPoint.normal.norm();
+				double nl_dot = unit_n.dot(unit_l);
+				if (nl_dot > 0) {
+					hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.diffuseColour * nl_dot;
+				}
+				
+			}
+			
 		}
 	}
 

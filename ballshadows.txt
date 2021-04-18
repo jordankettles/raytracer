@@ -4,6 +4,11 @@ Scene
   Filename ballshadows.png
 End
 
+Object Sphere
+  Colour 1 0 0
+  Translate 0 0 2
+End
+
 Object Plane
   Scale 10
   Colour 1 1 1
