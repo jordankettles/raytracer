@@ -35,6 +35,34 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 	RayIntersection hit;
 	hit.material = material;
 
+	double z0 = inverseRay.point(2);
+	double dz = inverseRay.direction(2);
+	double zt = (-1-z0)/dz; /* Front face */
+
+	if (std::abs(dz) > epsilon) {
+		if (zt > 0) {
+			hit.point = inverseRay.point + zt*inverseRay.direction;
+			if (pow(hit.point(2), 2) < 1) { //This part is wrong.
+			hit.normal = Normal(0, 0, 1);
+			hit.point = transform.apply(hit.point);
+			hit.normal = transform.apply(hit.normal);
+			hit.distance = (hit.point - ray.point).norm();
+			result.push_back(hit);
+			}
+		}
+		zt = (1-z0)/dz;  /* Back face. */
+		if (zt > 0) {
+			hit.point = inverseRay.point + zt*inverseRay.direction;
+			if (pow(hit.point(2), 2) < 1) { //This part is wrong.
+			hit.normal = Normal(0, 0, 1);
+			hit.point = transform.apply(hit.point);
+			hit.normal = transform.apply(hit.normal);
+			hit.distance = (hit.point - ray.point).norm();
+			result.push_back(hit);
+			}
+		}
+	}
+
 	double a = d.dot(d);
 	double b = 2 * d.dot(p);
 	double c = p.dot(p) - 1;
