@@ -5,8 +5,8 @@ COSC342 Ray Tracer Assignment
 * Implement Rendering for:
     * Plane [x]
     * Cube [x]
-    * Cylinder []
-    * Tube []
+    * Cylinder [x]
+    * Tube [x]
     
 The code goes in the intersect method of the relevant class.
 * Implement Diffuse Lighting [x]
