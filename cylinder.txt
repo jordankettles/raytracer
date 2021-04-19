@@ -6,8 +6,8 @@ End
 
 Object Cylinder
     Colour 1 1 1
-    Rotate Y 30
-    Translate -1 0 3
+    Rotate Y 120
+    Translate 0 0 3
 End
 
 Object Plane
@@ -18,11 +18,12 @@ Object Plane
 End
 
 Camera PinholeCamera 1
+  Translate 1 0 0
 
 End
 
 Light PointLight
-  Location 3 0 0
+  Location 4 0 0
   Colour 10 10 10
 End
 

@@ -32,36 +32,13 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 	Direction d = inverseRay.direction;
 	d(2) = 0;
 
-	RayIntersection hit;
-	hit.material = material;
-
+	
 	double z0 = inverseRay.point(2);
 	double dz = inverseRay.direction(2);
 	double zt = (-1-z0)/dz; /* Front face */
 
-	if (std::abs(dz) > epsilon) {
-		if (zt > 0) {
-			hit.point = inverseRay.point + zt*inverseRay.direction;
-			if (pow(hit.point(2), 2) < 1) { //This part is wrong.
-			hit.normal = Normal(0, 0, 1);
-			hit.point = transform.apply(hit.point);
-			hit.normal = transform.apply(hit.normal);
-			hit.distance = (hit.point - ray.point).norm();
-			result.push_back(hit);
-			}
-		}
-		zt = (1-z0)/dz;  /* Back face. */
-		if (zt > 0) {
-			hit.point = inverseRay.point + zt*inverseRay.direction;
-			if (pow(hit.point(2), 2) < 1) { //This part is wrong.
-			hit.normal = Normal(0, 0, 1);
-			hit.point = transform.apply(hit.point);
-			hit.normal = transform.apply(hit.normal);
-			hit.distance = (hit.point - ray.point).norm();
-			result.push_back(hit);
-			}
-		}
-	}
+	RayIntersection hit;
+	hit.material = material;
 
 	double a = d.dot(d);
 	double b = 2 * d.dot(p);
@@ -69,6 +46,7 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 
 	double b2_4ac = b*b - 4*a*c;
 	double t;
+
 	switch (sign(b2_4ac)) {
 	case -1:
 		// No intersections
@@ -79,7 +57,7 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 		if (t > 0) {
 			// Intersection is in front of the ray's start point
 			hit.point = Point(inverseRay.point + t*inverseRay.direction);
-			if (hit.point(2) <= 1.0 and hit.point(2) >= -1) {
+			if (hit.point(2) <= 1 and hit.point(2) >= -1) {
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(Normal(inverseRay.point + t*inverseRay.direction));
 				if (hit.normal.dot(ray.direction) > 0) {
@@ -96,7 +74,7 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 		if (t > 0) {
 			// Intersection is in front of the ray's start point
 			hit.point = Point(inverseRay.point + t * inverseRay.direction);
-			if (hit.point(2) <= 1.0 and hit.point(2) >= -1) {
+			if (hit.point(2) <= 1 and hit.point(2) >= -1) {
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(Normal(inverseRay.point + t*inverseRay.direction));
 				if (hit.normal.dot(ray.direction) > 0) {
@@ -128,6 +106,32 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 		exit(-1);
 		break;
 	}
+	if (std::abs(dz) > epsilon) {
+		if (zt > 0) {
+			hit.point = inverseRay.point + zt*inverseRay.direction;
+			// if (std::abs(hit.point(0)) <= 1 && std::abs(hit.point(1)) <= 1) {
+			if (pow(hit.point(0), 2) + pow(hit.point(1), 2) <= 1) { 
+			hit.normal = Normal(0, 0, -1);
+			hit.point = transform.apply(hit.point);
+			hit.normal = transform.apply(hit.normal);
+			hit.distance = (hit.point - ray.point).norm();
+			result.push_back(hit);
+			}
+		}
+		zt = (1-z0)/dz;  /* Back face. */
+		if (zt > 0) {
+			hit.point = inverseRay.point + zt*inverseRay.direction;
+			if (pow(hit.point(0), 2) + pow(hit.point(1), 2) <= 1) { 
+			hit.normal = Normal(0, 0, 1);
+			hit.point = transform.apply(hit.point);
+			hit.normal = transform.apply(hit.normal);
+			hit.distance = (hit.point - ray.point).norm();
+			result.push_back(hit);
+			}
+		}
+	}
+
+
 
 
 
