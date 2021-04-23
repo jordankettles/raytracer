@@ -77,9 +77,20 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 				if (nl_dot > 0) {
 					hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.diffuseColour * nl_dot;
 				}
+				//Calculate Specular Lighting.
+				Direction v, r;
+				r = 2 * nl_dot * unit_n - unit_l;
+				v = -ray.direction;
+				if (nl_dot > 0) {
+					hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.specularColour * pow(r.dot(v), hitPoint.material.specularExponent);
+				}
+				//hitPoint.material.specularExponent;
+				// Is * ks * (r . v)^alpha
+				// Is = light->getIlluminationAt(hitPoint.point)
+				// r = 2(nl_dot)n - l
 				
-			}
-			
+				
+			}			
 		}
 	}
 
