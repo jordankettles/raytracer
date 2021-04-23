@@ -42,6 +42,15 @@
 				"major" : 2,
 				"minor" : 0
 			}
+		},
+		{
+			"jsonFile" : "toolchains-v1-b92230c63fdd5563d469.json",
+			"kind" : "toolchains",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 0
+			}
 		}
 	],
 	"reply" : 
@@ -59,6 +68,10 @@
 					{
 						"kind" : "codemodel",
 						"version" : 2
+					},
+					{
+						"kind" : "toolchains",
+						"version" : 1
 					}
 				],
 				"responses" : 
@@ -79,6 +92,15 @@
 						{
 							"major" : 2,
 							"minor" : 2
+						}
+					},
+					{
+						"jsonFile" : "toolchains-v1-b92230c63fdd5563d469.json",
+						"kind" : "toolchains",
+						"version" : 
+						{
+							"major" : 1,
+							"minor" : 0
 						}
 					}
 				]

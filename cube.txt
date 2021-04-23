@@ -6,8 +6,8 @@ End
 
 Object Cube
     Colour 1 1 1
-    Rotate X 40
-    Rotate Y 20
+    Rotate X 0
+    Rotate Y 0
     Translate -1.2 0 3
 End
 

@@ -35,6 +35,7 @@ std::vector<RayIntersection> Plane::intersect(const Ray& ray) const {
 		if (t > 0) {
 			RayIntersection hit;
 			hit.point = inverseRay.point + t*inverseRay.direction;
+			/* if x and y are in the range [-1, 1] */
 			if (std::abs(hit.point(0)) <= 1 && std::abs(hit.point(1)) <= 1) {
 				hit.material = material;
 				hit.normal = Normal(0, 0, 1);
