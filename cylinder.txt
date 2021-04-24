@@ -6,7 +6,7 @@ End
 
 Object Cylinder
     Colour 1 1 1
-    Rotate Y 120
+    Rotate Y 0
     Translate 0 0 3
 End
 

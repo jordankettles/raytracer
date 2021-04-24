@@ -6,6 +6,7 @@ End
 
 Object Plane
   Colour 1 0 0
+  Rotate Y 0
   Translate 0 0 2
 End
 
