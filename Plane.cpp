@@ -41,6 +41,9 @@ std::vector<RayIntersection> Plane::intersect(const Ray& ray) const {
 				hit.normal = Normal(0, 0, 1);
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(hit.normal);
+				if (hit.normal.dot(ray.direction) > 0) {
+				hit.normal = -hit.normal;
+				}
 				hit.distance = (hit.point - ray.point).norm();
 				result.push_back(hit);
 			}

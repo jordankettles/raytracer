@@ -47,7 +47,7 @@ std::vector<RayIntersection> Cube::intersect(const Ray& ray) const {
 			hit.point = inverseRay.point + zt*inverseRay.direction;
 			/* if x and y are in the range [-1, 1] */
 			if (std::abs(hit.point(0)) <= 1 && std::abs(hit.point(1)) <= 1) {
-			hit.normal = -Normal(0, 0, 1);
+			hit.normal = Normal(0, 0, -1);
 			hit.point = transform.apply(hit.point);
 			hit.normal = transform.apply(hit.normal);
 			hit.distance = (hit.point - ray.point).norm();
@@ -72,7 +72,7 @@ std::vector<RayIntersection> Cube::intersect(const Ray& ray) const {
 			hit.point = inverseRay.point + yt*inverseRay.direction;
 			 /* if x and z are in the range [-1, 1] */
 			if (std::abs(hit.point(0)) <= 1 && std::abs(hit.point(2)) <= 1) {
-				hit.normal = -Normal(0, 1, 0);
+				hit.normal = Normal(0, -1, 0);
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(hit.normal);
 				hit.distance = (hit.point - ray.point).norm();
@@ -97,7 +97,7 @@ std::vector<RayIntersection> Cube::intersect(const Ray& ray) const {
 			hit.point = inverseRay.point + xt*inverseRay.direction;
 			/* if y and z are in the range [-1, 1] */
 			if(std::abs(hit.point(1)) <= 1 && std::abs(hit.point(2)) <= 1) {
-				hit.normal = -Normal(1, 0, 0);
+				hit.normal = Normal(-1, 0, 0);
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(hit.normal);
 				hit.distance = (hit.point - ray.point).norm();

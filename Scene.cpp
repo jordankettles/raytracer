@@ -64,33 +64,31 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 			hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.ambientColour;
 		} else {
 			// Not an ambient light
-			//Calculate Shadows.
-			Vector unit_l = -light->getLightDirection(hitPoint.point) / light->getLightDirection(hitPoint.point).norm();
+			/* Calculate Shadows. */
+			Direction unit_l = -light->getLightDirection(hitPoint.point) / light->getLightDirection(hitPoint.point).norm();
 			Ray shadowRay;
 			shadowRay.point = hitPoint.point;
 			shadowRay.direction = unit_l;
 			RayIntersection shadowHitPoint = intersect(shadowRay);
-			//Calculate diffuse lighting
-			if (shadowHitPoint.distance > light->getDistanceToLight(hitPoint.point) or shadowHitPoint.distance < 0) {
-				Vector unit_n = hitPoint.normal / hitPoint.normal.norm();
-				double nl_dot = unit_n.dot(unit_l);
-				if (nl_dot > 0) {
-					hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.diffuseColour * nl_dot;
-				}
-				//Calculate Specular Lighting.
-				Direction v, r;
-				r = 2 * nl_dot * unit_n - unit_l;
-				v = -ray.direction;
-				if (nl_dot > 0) {
-					hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.specularColour * pow(r.dot(v), hitPoint.material.specularExponent);
-				}
-				//hitPoint.material.specularExponent;
-				// Is * ks * (r . v)^alpha
-				// Is = light->getIlluminationAt(hitPoint.point)
-				// r = 2(nl_dot)n - l
-				
-				
-			}			
+			/* Calculate if the point is in shadow. */
+			if (shadowHitPoint.distance < light->getDistanceToLight(hitPoint.point)) {
+				continue;
+			}
+			/* Calculate Diffuse Lighting. */
+			Normal unit_n = hitPoint.normal / hitPoint.normal.norm();
+			double nl_dot = unit_n.dot(unit_l);
+			if (nl_dot > 0) {
+				hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.diffuseColour * nl_dot;
+			}
+			/* Calculate Specular Lighting. */
+			Direction v, r;
+			r = 2 * nl_dot * unit_n - unit_l;
+			v = -ray.direction;
+			v = v / v.norm();
+
+			if (nl_dot > 0) {
+			hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.specularColour * pow(r.dot(v), hitPoint.material.specularExponent);
+			}
 		}
 	}
 

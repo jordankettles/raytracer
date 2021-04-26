@@ -1,7 +1,8 @@
 Scene
     backgroundColour 0.75 1.0 1.0
-    renderSize 300 200
+    renderSize 600 400
     rayDepth 2
+    Filename snowman.png
 End
 
 # Ground

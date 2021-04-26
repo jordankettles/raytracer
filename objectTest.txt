@@ -43,7 +43,7 @@ Light AmbientLight
 	Colour 0.5 0.5 0.5
 End
 
-# And point lght
+# And point light
 Light PointLight
 	Location 0 -10 0
 	# Colour may seem large, but the 1/distance^2 law will kick in
