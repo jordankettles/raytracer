@@ -85,7 +85,7 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 		if (t > 0) {
 			// Intersection is in front of the ray's start point
 			hit.point = Point(inverseRay.point + t * inverseRay.direction);
-			if (hit.point(2) <= 1.0 and hit.point(2) > -1) {
+			if (hit.point(2) <= 1 and hit.point(2) > -1) {
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(Normal(p + t * d));
 				hit.distance = (hit.point - ray.point).norm();
