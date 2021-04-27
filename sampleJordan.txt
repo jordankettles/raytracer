@@ -1,0 +1,71 @@
+# Sample image for Jordan Kettles 2147684
+Scene
+    backgroundColour 0 0 0
+    renderSize 600 600
+	rayDepth 2
+	Filename sampleJordan.png
+End
+
+# A floor for our objects.
+Object Plane
+  Scale 10
+  Colour 0.7 0.7 0.7
+  Rotate X 90
+  Translate 0 1 0
+End
+
+# A shiny reflective sphere, giving us an interesting view.
+Object Sphere
+  Colour 0.9 0.9 0.9
+  Specular 1.0 1.0 1.0 10
+  Mirror 0.7 0.7 0.7
+  Translate -1.5 0 8
+End 
+
+# A long red cylinder; a pole.
+Object Cylinder
+    Scale3 0.1 0.1 2
+	Colour 1 0 0
+    Rotate X 90
+	Translate 0 0 8
+End
+
+# A blue cube on top of the pole.
+Object Cube 
+    Scale 0.5
+	Colour 0.31 0.69 0.87
+	Rotate X 45
+	Rotate Z 45
+	Translate 0.1 -2.5 8
+End
+
+# A large greenish tube.
+Object Tube 0.5
+	Colour 0.56 0.78 0.4
+    Scale3 0.5 0.5 1
+	Translate 1 0.5 5
+End
+
+# A secret purple cube that is behind the camera,
+# only viewable in the reflection of the sphere.
+Object Cube
+  Colour 0.6 0.47 0.79
+  Rotate Y 45
+  Translate -1 0 -4
+End
+
+# Some ambient light for our scene.
+Light AmbientLight
+	Colour 0.5 0.5 0.5
+End
+
+# A Point Light to create some interesting shadows.
+Light PointLight
+	Location 2 -10 0
+	Colour 100 100 100
+End
+
+# Default Camera.
+Camera PinholeCamera 2
+	# Default camera settings.
+End

@@ -32,7 +32,7 @@ std::vector<RayIntersection> Plane::intersect(const Ray& ray) const {
 	double t = -z0/dz;
 
 	if (std::abs(dz) > epsilon) {
-		if (t > 0) {
+		if (t > 0) { /* If the distance is positive. */
 			RayIntersection hit;
 			hit.point = inverseRay.point + t*inverseRay.direction;
 			/* if x and y are in the range [-1, 1] */
@@ -41,7 +41,7 @@ std::vector<RayIntersection> Plane::intersect(const Ray& ray) const {
 				hit.normal = Normal(0, 0, 1);
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(hit.normal);
-				if (hit.normal.dot(ray.direction) > 0) {
+				if (hit.normal.dot(ray.direction) > 0) { /* Reverse the normal if the normal is not the same direction as the ray. */
 				hit.normal = -hit.normal;
 				}
 				hit.distance = (hit.point - ray.point).norm();

@@ -77,7 +77,7 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 			/* Calculate Diffuse Lighting. */
 			Normal unit_n = hitPoint.normal / hitPoint.normal.norm();
 			double nl_dot = unit_n.dot(unit_l);
-			if (nl_dot > 0) {
+			if (nl_dot > 0) { /* If the light and the hit point normal are roughly the same direction */
 				hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.diffuseColour * nl_dot;
 			}
 			/* Calculate Specular Lighting. */
@@ -86,7 +86,7 @@ Colour Scene::computeColour(const Ray& ray, unsigned int rayDepth) const {
 			unit_v = -ray.direction;
 			unit_v = unit_v / unit_v.norm();
 
-			if (nl_dot > 0) {
+			if (nl_dot > 0) { /* If the light and the hit point normal are roughly the same direction */
 			hitColour += light->getIlluminationAt(hitPoint.point) * hitPoint.material.specularColour * pow(unit_r.dot(unit_v), hitPoint.material.specularExponent);
 			}
 		}

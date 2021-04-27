@@ -56,10 +56,10 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 	case 0:
 		// One intersection
 		t = -b/(2*a);
-		if (t > 0) {
+		if (t > 0) { /* If the hit distance is positive */
 			// Intersection is in front of the ray's start point
 			hit.point = Point(inverseRay.point + t*inverseRay.direction);
-			if (hit.point(2) <= 1 and hit.point(2) >= -1) {
+			if (hit.point(2) <= 1 and hit.point(2) >= -1) { /* If z is in the range [-1, 1] */
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(Normal(p + t * d));
 				hit.distance = (hit.point - ray.point).norm();
@@ -70,10 +70,10 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 	case 1:
 		// Two intersections
 		t = (-b + sqrt(b*b - 4*a*c))/(2*a);
-		if (t > 0) {
+		if (t > 0) { /* If the hit distance is positive */
 			// Intersection is in front of the ray's start point
 			hit.point = Point(inverseRay.point + t * inverseRay.direction);
-			if (hit.point(2) <= 1 and hit.point(2) >= -1) {
+			if (hit.point(2) <= 1 and hit.point(2) >= -1) { /* If z is in the range [-1, 1] */
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(Normal(p + t * d));
 				hit.distance = (hit.point - ray.point).norm();
@@ -82,10 +82,10 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 		}
 
 		t = (-b - sqrt(b*b - 4*a*c))/(2*a);
-		if (t > 0) {
+		if (t > 0) { /* If the hit distance is positive */
 			// Intersection is in front of the ray's start point
 			hit.point = Point(inverseRay.point + t * inverseRay.direction);
-			if (hit.point(2) <= 1 and hit.point(2) > -1) {
+			if (hit.point(2) <= 1 and hit.point(2) > -1) { /* If z is in the range [-1, 1] */
 				hit.point = transform.apply(hit.point);
 				hit.normal = transform.apply(Normal(p + t * d));
 				hit.distance = (hit.point - ray.point).norm();
@@ -101,9 +101,9 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 
 	/* Check for an intersection with the top and bottom cap. */
 	if (std::abs(dz) > epsilon) {
-		if (zt > 0) { 
+		if (zt > 0) {  /* If the hit distance is positive */
 			hit.point = inverseRay.point + zt*inverseRay.direction;
-			if (pow(hit.point(0), 2) + pow(hit.point(1), 2) <= 1) { 
+			if (pow(hit.point(0), 2) + pow(hit.point(1), 2) <= 1) { /* If x^2 + y^2 <= 1 */
 			hit.normal = Normal(0, 0, -1);
 			hit.point = transform.apply(hit.point);
 			hit.normal = transform.apply(hit.normal);
@@ -112,9 +112,9 @@ std::vector<RayIntersection> Cylinder::intersect(const Ray& ray) const {
 			}
 		}
 		zt = (1-z0)/dz;  /* Bottom cap */
-		if (zt > 0) {
+		if (zt > 0) { /* If the hit distance is positive */
 			hit.point = inverseRay.point + zt*inverseRay.direction;
-			if (pow(hit.point(0), 2) + pow(hit.point(1), 2) <= 1) { 
+			if (pow(hit.point(0), 2) + pow(hit.point(1), 2) <= 1) { /* If x^2 + y^2 <= 1 */
 			hit.normal = Normal(0, 0, 1);
 			hit.point = transform.apply(hit.point);
 			hit.normal = transform.apply(hit.normal);
